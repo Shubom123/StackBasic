@@ -1,7 +1,7 @@
 package com.stack;
 
 public class MyStack {
-    Node head;
+    public static Node head;
     Node tail;
     public Node push(int data){
         Node newNode = new Node(data);
@@ -30,5 +30,10 @@ public class MyStack {
                 temp = temp.next;
             }
         }
+    }
+    public Node pop(){
+        Node tempNode = head;
+        head = head.next;
+        return tempNode;
     }
 }
